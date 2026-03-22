@@ -23,11 +23,11 @@ if (foundProduct is not null)
     Console.WriteLine($"Found: {foundProduct.Name}");
 
 newProduct.Category = "Not some category";
-context.SaveChanges(); // ✅ обов'язково
+context.SaveChanges();
 Console.WriteLine($"New category: {newProduct.Category}");
 
 context.Products.Remove(newProduct);
-context.SaveChanges(); // ✅ обов'язково
+context.SaveChanges();
 Console.WriteLine($"Deleted: {newProduct.Name}");
 
 int count = context.Products.Count();
