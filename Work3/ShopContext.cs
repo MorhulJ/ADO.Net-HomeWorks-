@@ -13,7 +13,7 @@ public class ShopContext : DbContext
             "Server=localhost;Database=ShopDB;User Id=sa;Password=yourStrong(!)Password;Encrypt=False"
         );
         //Task 1.2
-        // options.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
-        // options.EnableSensitiveDataLogging();
+        options.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
+        options.EnableSensitiveDataLogging();
     }
 }
